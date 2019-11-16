@@ -52,6 +52,9 @@ body {
   .banner-bg-primary-accent {
     fill: $primary-accent!important;
   }
+  .banner-bg-secondary-accent {
+    fill: $lilac !important;
+  }
 }
 
 .asset_youtubePlayButton_wrapper {
@@ -281,7 +284,7 @@ body {
   position: relative;
   z-index: -1;
   min-height: 80vh;
-  background-image: url(/assets/img/gabbytwitter-rosegold.jpg);
+  background-image: url(/assets/img/gabbytwitter-lilac.jpg);
   background-position: 0px 0px;
   background-size: cover;
 }

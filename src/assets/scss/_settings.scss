@@ -65,7 +65,14 @@
 // 1. Global
 // ---------
 
-$primary-accent: #E8C5B3;
+$lilac: #d3b7d8;
+$steel-link: #a13e97;
+$eminence: #632a7e;
+$valentino: #280e38;
+$rosegold: #E8C5B3;
+
+
+$primary-accent: $eminence;
 
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
