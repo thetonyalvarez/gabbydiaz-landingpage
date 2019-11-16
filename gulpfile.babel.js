@@ -43,6 +43,10 @@ gulp.task('build',
 gulp.task('default',
   gulp.series('build', server, watch));
 
+// Images 
+gulp.task('images', 
+  gulp.series(images, copy))
+
 // Delete the "dist" folder
 // This happens every time a build starts
 function clean(done) {
@@ -152,6 +156,7 @@ function images() {
   return gulp.src('src/assets/img/**/*')
     .pipe($.if(PRODUCTION, $.imagemin([
       $.imagemin.jpegtran({ progressive: true }),
+      $.imagemin.optipng({optimizationLevel: 6}),
     ])))
     .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }
