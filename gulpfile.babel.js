@@ -29,6 +29,11 @@ function loadConfig() {
   return yaml.load(ymlFile);
 }
 
+// Load Image Min settings
+const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
+const mozjpeg = require('imagemin-mozjpeg');
+
 // Build the "dist" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task('build',
@@ -44,10 +49,15 @@ function clean(done) {
   rimraf(PATHS.dist, done);
 }
 
+
 // Copy files out of the assets folder
 // This task skips over the "img", "js", and "scss" folders, which are parsed separately
 function copy() {
   return gulp.src(PATHS.assets)
+    .pipe(imagemin([
+        pngquant({quality: [0.6, 0.6]}),
+        mozjpeg({quality: 60})
+      ]))
     .pipe(gulp.dest(PATHS.dist + '/assets'));
 }
 

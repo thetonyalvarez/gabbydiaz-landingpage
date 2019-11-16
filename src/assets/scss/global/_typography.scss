@@ -1,3 +1,15 @@
+$font_family_1: 'Bebas Kai', Impact, sans-serif;
+$font_family_2: Triester, sans-serif;
+$font_family_3: Lato, sans-serif;
+
 h1 {
   font-size:8em;
+}
+
+.primary-accent-text-color {
+	color: $primary-accent;
+}
+
+.white {
+  color: $white;
 }
