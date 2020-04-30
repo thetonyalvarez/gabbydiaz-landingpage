@@ -18,7 +18,7 @@
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",
     "imagemin-svgo": "^7.0.0",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "motion-ui": "^2.0.3",
     "scrollreveal": "^4.0.5",
     "what-input": "^5.1.2"
